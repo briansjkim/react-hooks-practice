@@ -33,6 +33,8 @@ const UserPhotos = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
+          // map here?
+          // but then I wouldn't be able to make api calls in the next child component
           <div>
             <AlbumImage albums={albums} />
           </div>
