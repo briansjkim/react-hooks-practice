@@ -5,6 +5,7 @@ import './App.css';
 const App = () => {
   const [allUsers, setUsers] = useState([]);
   const [searchedUser, setSearchedUser] = useState('');
+  const [pageError, setPageError] = useState(false);
   const [isLoading, setLoading] = useState(true);
   const [noResults, setNoResults] = useState(false);
 
@@ -21,7 +22,8 @@ const App = () => {
         setUsers(resUsers);
         setLoading(false);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        setPageError(true);
       }
     }
 
@@ -54,7 +56,8 @@ const App = () => {
 
         setSearchedUser('');
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        setPageError(true);
       }
     }
 
@@ -63,6 +66,10 @@ const App = () => {
 
   if (isLoading) {
     return <div>Loading...</div>
+  };
+
+  if (pageError) {
+    return <div>Something went wrong</div>
   };
 
   return (
