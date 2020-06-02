@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AlbumImage from './AlbumImage.js';
 import { useHistory } from 'react-router-dom';
 
 const UserPhotos = () => {
@@ -26,10 +27,15 @@ const UserPhotos = () => {
 
   return (
     <div>
+      <div>
+        <h1>{userName + "'s Photos"}</h1>
+      </div>
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-          <p>Hello from UserPhotos</p>
+          <div>
+            <AlbumImage albums={albums} />
+          </div>
         )}
     </div>
   )
