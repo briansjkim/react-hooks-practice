@@ -10,21 +10,6 @@ const UserPhotos = () => {
   const userId = history.location.state.user.id;
   const userName = history.location.state.user.name;
 
-  // userId can change over time, so pass it into the array of variables
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const allAlbums = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}/albums`);
-  //       const resAlbums = await allAlbums.json();
-  //       setAlbums(resAlbums);
-  //       setLoading(false);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, [userId]);
 
   useEffect(() => {
     async function fetchData() {
@@ -47,17 +32,14 @@ const UserPhotos = () => {
   }, [userId]);
 
   return (
-    <div>
-      <div>
+    <div className="User-photos">
+      <div className="User-header">
         <h1>{userName + "'s Photos"}</h1>
       </div>
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-          // map here?
-          // but then I wouldn't be able to make api calls in the next child component
-          <div>
-            {/* <AlbumImage albums={albums} /> */}
+          <div className="User-albums">
             {albums.map((album, idx) =>
               <AlbumImage album={album} photo={photos[idx]} key={idx} />
             )}
