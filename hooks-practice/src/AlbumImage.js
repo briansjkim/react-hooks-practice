@@ -1,12 +1,11 @@
 import React from 'react';
-import Albums from './Albums.js';
 
 const AlbumImage = ({ album, photo }) => {
   return (
-    <div>
-      <div>
+    <div className="Album-image">
+      <div className="Photo-details">
         <img src={photo.thumbnailUrl} alt=""></img>
-        <p>{photo.title}</p>
+        <h2>{photo.title}</h2>
         <p>{album.title}</p>
       </div>
     </div>
