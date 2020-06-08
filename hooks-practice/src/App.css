@@ -1,16 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: "BebasNeueRegular"
 }
 
 .App-header {
@@ -24,15 +14,87 @@
   color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.Search {
+  width: 800px;
+  text-align: left;
+  margin-bottom: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Search-user {
+  margin-right: 92px;
+  text-align: center;
+  height: 50px;
+  width: 500px;
+  font-size: 20px;
+}
+
+.Submit-search {
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.Users {
+  display: flex;
+  width: 800px;
+  flex-flow: row wrap;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.User {
+  border: 1px solid #A9A9A9;
+  width: 800px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.User-name {
+  float: left;
+}
+
+.User-company {
+  margin-top: 50px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.User-photos {
+  text-align: center;
+}
+
+.User-albums {
+  display: flex;
+  width: 1500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.Album-image {
+  flex-wrap: wrap;
+}
+
+.Photo-details {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  height: 400px;
+  width: 350px;
+  margin-left: 120px;
+  margin-bottom: 60px;
+  font-size: 15px;
+}
+
+.Photo-details h2, p {
+  font-family: BebasNeueLight;
+  font-size: 17px;
+}
+
+img {
+  width: 350px;
+  height: 300px;
 }
