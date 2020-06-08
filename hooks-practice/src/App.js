@@ -22,7 +22,6 @@ const App = () => {
         setUsers(resUsers);
         setLoading(false);
       } catch (error) {
-        // console.log(error);
         setPageError(true);
       }
     }
@@ -56,7 +55,6 @@ const App = () => {
 
         setSearchedUser('');
       } catch (error) {
-        // console.log(error);
         setPageError(true);
       }
     }
