@@ -2,7 +2,7 @@ import React from 'react';
 
 const Albums = ({ album }) => {
   return (
-    <p>Albums</p>
+    <p>{album.title}</p>
   )
 }
 
