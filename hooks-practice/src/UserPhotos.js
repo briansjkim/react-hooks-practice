@@ -7,7 +7,7 @@ const UserPhotos = () => {
   const [albums, setAlbums] = useState([]);
   const [photos, setPhotos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [picsPerPage] = useState(5);
+  const [picsPerPage] = useState(18);
   const [isLoading, setLoading] = useState(true);
   const history = useHistory();
   const userId = history.location.state.user.id;
@@ -40,7 +40,7 @@ const UserPhotos = () => {
   const idxOfLastPic = currentPage * picsPerPage;
   const idxOfFirstPic = idxOfLastPic - picsPerPage;
   const currentPics = photos.slice(idxOfFirstPic, idxOfLastPic);
-  console.log(currentPics);
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (

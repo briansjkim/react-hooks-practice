@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 const Pagination = ({ totalPics, picsPerPage, paginate}) => {
     const pageNumbers = [];
@@ -8,14 +9,12 @@ const Pagination = ({ totalPics, picsPerPage, paginate}) => {
     }
 
     return (
-        <nav>
-            <ul>
-                {pageNumbers.map(number => (
-                    <li key={number}>
-                        {number}
-                    </li>
-                ))}
-            </ul>
+        <nav className="Pagination">
+            {pageNumbers.map( (number, idx) => (
+                <a onClick={() => paginate(number)} key={idx} href="!#">
+                    {number}
+                </a>
+            ))}
         </nav>
     )
 }
