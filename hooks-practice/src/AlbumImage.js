@@ -1,13 +1,13 @@
 import React from 'react';
 import Albums from './Albums.js';
 
-const AlbumImage = ({ albums }) => {
+const AlbumImage = ({ album, photo }) => {
   return (
     <div>
       <div>
-        {albums.map((album, idx) =>
-          <Albums album={album} key={idx} />
-        )}
+        <img src={photo.thumbnailUrl} alt=""></img>
+        <p>{photo.title}</p>
+        <p>{album.title}</p>
       </div>
     </div>
   )
